@@ -1,0 +1,196 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Orbitron:400,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        
+
+
+        <!--Team input-->
+        <div class="heading">
+            <h1 style="font-size:40pt">Bowl of Nouns</h1>
+        </div>
+
+
+
+        <!-- Button trigger modal -->
+
+
+
+        <div id="home">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="rules1">
+              RULES
+            </button>
+            <input type="button" id="start" value="START"> 
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="modal-title" id="myModalLabel">How to play</h1>
+              </div>
+              <div class="modal-body">
+                <ol>
+                    <li>Gather a group of friends (minimum of 6)</li>
+                    <li>Fill the bowl with nouns. Be as creative, clever, and silly as possible</li>
+                    <li>A player from team 1 starts with the bowl, and is given one minute. The objective is to have your team guess the nouns in order to have them removed from the bowl <br>(1 noun = 1 point)</li>
+                    <li>Once his/her minute is up it goes to a player from Team 2 and they are given one minute to do the same</li>
+                    <li>The bowl is then passed to a new player from Team 1 and the pattern continues</li>
+                    <li>A round ends when every noun is removed from the bowl. The nouns are then placed back into the bowl to begin the next round</li>                   
+                </ol>
+              </div>
+              <h2 class="modal-title">Overview</h2>
+              <div class="modal-body">
+                <p>The game is composed of 3 rounds...</p>
+                <ul>
+                    <li>WORD SPLASH: DESCRIBE the noun to YOUR TEAM without explicitly stating what is written</li>
+                    <li>MUTE MAYHEM: ACT the noun to YOUR TEAM without speaking or making any sounds</li>
+                    <li>ONE WORD: STATE one word associated with the noun to prompt YOUR TEAM to guess the noun. Once the word is stated, you can only repeat that word, but you may vary inflection</li>                   
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <div id="teamSection">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form id="team1">
+                        
+                        <label for="name1">Enter name</label><br><input type="text" id="name1"><br>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form id="team2">
+                        
+                        <label for="name2">Enter name</label><br><input type="text" id="name2"><br>
+                    </form>
+                </div>
+                <input type="button" id="submitName" value="Submit">
+            </div>
+        </div>        
+
+
+
+        <form id="nounInput">
+            <div class="row">
+                <div class="col-sm-3">
+                    <input type="button" id="back" value="Back">
+                </div>
+                <div class="col-sm-6">
+                    <h3 style="font-size:20pt">ENTER NOUNS</h3>
+                </div>
+                <div class="col-sm-3">
+                    <button type="button" data-toggle="modal" data-target="#myModal" id="rules">
+                        RULES
+                    </button>
+                </div>
+                <div class="col-sm-12">     
+                    <div id="card">
+                        <br><input type="text" id="nounBox"><br>
+                        <input type="button" id="submit" value="Submit">
+                    </div> 
+                </div>
+
+            <div class="col-sm-12">
+                <input type="button" id="play" value="PLAY">
+            </div>
+            </div>         
+        </form>
+        
+
+        <div id="game">   
+            <div class="row">
+                 <div class="col-sm-12">
+                        <div id="word">   
+                        <!-- Word picked here -->
+                        </div>  
+                        <input type="button" id ="next" value="Next">           
+                </div>
+                <div class="col-sm-12">
+                    <button type="button" id="timer">
+                        Start Timer
+                    </button>
+                </div>
+                <div class="col-sm-6">
+                    <div id="team1a">
+                        <div id="score1">
+                            
+                        </div>
+                        <div id="num1">
+                            <h1>0</h1>
+                        </div>
+                    </div>               
+                </div>
+                <div class="col-sm-6">
+                    <div id="team2a">
+                        <div id="score2">
+                            
+                        </div>
+                        <div id="num2">
+                            <h1>0</h1>
+                        </div>                      
+                    </div>               
+                </div>               
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div id="roundOver">
+                <h1>ROUND OVER</h1>
+                <button style="text-align:center;" type="button" id="continue">
+                    Continue
+                </button>
+            </div>
+        </div>
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
